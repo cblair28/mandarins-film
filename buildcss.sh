@@ -1,0 +1,1 @@
+sass assets/css/styles.scss dist/index.css

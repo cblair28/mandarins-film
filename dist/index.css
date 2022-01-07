@@ -1,0 +1,390 @@
+@font-face {
+  font-family: "le monde";
+  src: url("../assets/fonts/le monde regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "le monde";
+  src: url("../assets/fonts/le monde demi.otf") format("opentype");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "le monde";
+  src: url("../assets/fonts/le monde bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "le monde";
+  src: url("../assets/fonts/le monde boldit.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "le monde";
+  src: url("../assets/fonts/le monde italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gill Sans";
+  src: url("../assets/fonts/Gill Sans.otf") format("opentype");
+  font-weight: normal;
+  font-display: swap;
+}
+.hidden-xs {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .hidden-xs {
+    display: block;
+  }
+}
+
+.visible-only-xs {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .visible-only-xs {
+    display: none;
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+body {
+  font-family: "le monde";
+}
+
+.background-church {
+  background-image: url("../assets/images/background.png");
+  background-size: auto;
+  background-position-x: 50%;
+}
+@media screen and (min-width: 1044px) {
+  .background-church {
+    background-repeat: no-repeat;
+  }
+}
+
+.background-tan {
+  background-color: #be9080;
+}
+
+.Header {
+  font-family: "le monde";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.Header-wrapper {
+  position: relative;
+  background-color: rgba(190, 144, 128, 0.7);
+}
+@media screen and (max-width: 767px) {
+  .Header-wrapper {
+    height: 74px;
+  }
+}
+.Header-menu {
+  display: flex;
+  margin: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  transition: 0.3s all ease;
+}
+@media screen and (max-width: 767px) {
+  .Header-menu {
+    flex-direction: column;
+    padding: 0;
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    background-color: #be9080;
+  }
+}
+.Header-menuItem {
+  display: block;
+  border-bottom: 1px solid #3c1601;
+}
+@media screen and (min-width: 768px) {
+  .Header-menuItem {
+    border: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Header-menuItem--instagram {
+    margin-left: auto;
+  }
+}
+.Header-menuItem--instagram:hover {
+  background-color: #be9080;
+}
+.Header-menuLink {
+  color: #3c1601;
+  padding: 20px;
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+  font-size: 24px;
+}
+.Header-menuLink:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+  .Header-menuLink {
+    font-size: 30px;
+  }
+}
+.Header-menuInstagram {
+  height: 40px;
+  width: 40px;
+}
+.Header-toggle {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.Header-toggle::before, .Header-toggle::after, .Header-toggleBar {
+  background-color: #3c1601;
+  content: "";
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  margin: 7px 0;
+  transition: 0.3s ease all;
+}
+.Header.is-active .Header-menu {
+  left: 0;
+}
+.Header.is-active .Header-toggle::before {
+  transform: translateY(13px) rotate(135deg);
+}
+.Header.is-active .Header-toggle::after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+.Header.is-active .Header-toggleBar {
+  transform: scale(0);
+}
+
+.Hero {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-top: 100px;
+}
+@media screen and (min-width: 768px) {
+  .Hero {
+    width: 767px;
+    max-width: 767px;
+  }
+}
+@media screen and (min-width: 1044px) {
+  .Hero {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Hero {
+    margin-top: 240px;
+  }
+}
+.Hero-title {
+  font-size: 54px;
+  font-weight: 700;
+  color: #97340b;
+  text-align: center;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .Hero-title {
+    font-size: 70px;
+  }
+}
+@media screen and (min-width: 1044px) {
+  .Hero-title {
+    font-size: 150px;
+  }
+}
+.Hero-comingSoon .Hero-title {
+  font-size: 40px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .Hero-comingSoon .Hero-title {
+    font-size: 70px;
+  }
+}
+@media screen and (min-width: 1044px) {
+  .Hero-comingSoon .Hero-title {
+    font-size: 100px;
+  }
+}
+.Hero-description {
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+@media screen and (min-width: 768px) {
+  .Hero-description {
+    font-size: 24px;
+  }
+}
+.Hero-descriptionSub {
+  margin-top: 20px;
+}
+@media screen and (min-width: 1044px) {
+  .Hero-descriptionSub {
+    margin-top: 40px;
+  }
+}
+
+.Email {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  margin: 45px auto;
+}
+@media screen and (min-width: 768px) {
+  .Email {
+    width: 767px;
+    max-width: 767px;
+  }
+}
+@media screen and (min-width: 1044px) {
+  .Email {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Email {
+    margin: 90px auto;
+  }
+}
+.Email-container {
+  background-color: rgba(60, 22, 1, 0.9);
+  padding: 24px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2px;
+}
+@media screen and (min-width: 768px) {
+  .Email-container {
+    padding: 32px 80px 44px;
+    display: inline-flex;
+  }
+}
+.Email-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #be9080;
+}
+@media screen and (min-width: 768px) {
+  .Email-title {
+    font-size: 32px;
+  }
+}
+.Email-submitArrow {
+  width: 20px;
+  margin-left: 12px;
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease;
+}
+.Email-submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  margin: 20px auto 0;
+  background-color: #3c1601;
+  border: 1px solid #be9080;
+  color: #be9080;
+  cursor: pointer;
+  font-family: "Gill Sans";
+  font-size: 18px;
+  width: 150px;
+}
+.Email-submitButton:hover .Email-submitArrow {
+  left: 6px;
+}
+@media screen and (min-width: 768px) {
+  .Email-submitButton {
+    margin: 0;
+    border: none;
+    width: auto;
+  }
+}
+.Email-submitText {
+  position: relative;
+  top: 2px;
+}
+.Email-submitWrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  width: 100%;
+  margin-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  .Email-submitWrapper {
+    flex-direction: row;
+    border: 1px solid #be9080;
+    width: auto;
+  }
+}
+.Email-submit {
+  padding: 8px 20px;
+  color: #3c1601;
+  font-size: 18px;
+  background-color: #be9080;
+  border: 2px solid #3c1601;
+}
+.Email-submit::placeholder {
+  color: #3c1601;
+  font-family: "Gill Sans";
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .Email-submit {
+    width: 280px;
+  }
+}
+
+.Lookbook {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+}
+@media screen and (min-width: 768px) {
+  .Lookbook {
+    margin-top: 100px;
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Header.is-active + .Lookbook {
+    margin-top: 400px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
