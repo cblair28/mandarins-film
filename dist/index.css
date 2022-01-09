@@ -63,18 +63,23 @@ body {
 }
 
 .background-church {
-  background-image: url("../assets/images/background.png");
+  background-image: url("../assets/images/mobilebg.jpg");
   background-size: auto;
-  background-position-x: 50%;
 }
 @media screen and (min-width: 1044px) {
   .background-church {
     background-repeat: no-repeat;
+    background-image: url("../assets/images/background.jpg");
+    background-position-x: 50%;
   }
 }
 
 .background-tan {
   background-color: #be9080;
+}
+
+.background-gray {
+  background-color: #b4b8c4;
 }
 
 .Header {
@@ -83,10 +88,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 5;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .Header-wrapper {
   position: relative;
-  background-color: rgba(190, 144, 128, 0.7);
+  background-color: #f2ded5;
 }
 @media screen and (max-width: 767px) {
   .Header-wrapper {
@@ -107,7 +114,7 @@ body {
     position: absolute;
     left: -100%;
     width: 100%;
-    background-color: #be9080;
+    background-color: #f2ded5;
   }
 }
 .Header-menuItem {
@@ -116,6 +123,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .Header-menuItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
   }
 }
@@ -133,28 +143,29 @@ body {
   font-weight: bold;
   display: block;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 22px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .Header-menuLink:hover {
   text-decoration: underline;
 }
-@media screen and (min-width: 768px) {
-  .Header-menuLink {
-    font-size: 30px;
-  }
+.Header-menuLink--current {
+  text-decoration: underline;
+  pointer-events: none;
 }
 .Header-menuInstagram {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
 .Header-toggle {
   position: absolute;
-  right: 12px;
+  left: 12px;
   top: 12px;
   width: 50px;
   background: transparent;
   border: none;
   cursor: pointer;
+  transition: 0.3s ease all;
 }
 .Header-toggle::before, .Header-toggle::after, .Header-toggleBar {
   background-color: #3c1601;
@@ -167,6 +178,9 @@ body {
 }
 .Header.is-active .Header-menu {
   left: 0;
+}
+.Header.is-active .Header-toggle {
+  left: calc(100vw - 62px);
 }
 .Header.is-active .Header-toggle::before {
   transform: translateY(13px) rotate(135deg);
@@ -201,8 +215,13 @@ body {
     margin-top: 240px;
   }
 }
+@media screen and (min-width: 768px) {
+  .Hero--about {
+    margin-top: 150px;
+  }
+}
 .Hero-title {
-  font-size: 54px;
+  font-size: 40px;
   font-weight: 700;
   color: #97340b;
   text-align: center;
@@ -235,7 +254,7 @@ body {
 }
 .Hero-description {
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   font-style: italic;
   margin-left: 12px;
   margin-right: 12px;
@@ -245,12 +264,71 @@ body {
     font-size: 24px;
   }
 }
+.Hero--about {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .Hero--about {
+    width: 767px;
+    max-width: 767px;
+  }
+}
+@media screen and (min-width: 1044px) {
+  .Hero--about {
+    width: 1043px;
+    max-width: 1043px;
+  }
+}
+.Hero--about .Hero-title {
+  font-size: 32px;
+}
+@media screen and (min-width: 768px) {
+  .Hero--about .Hero-title {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1044px) {
+  .Hero--about .Hero-title {
+    font-size: 60px;
+  }
+}
+.Hero--about .Hero-description {
+  font-style: normal;
+  font-size: 18px;
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+.Hero--contact .Hero-description {
+  font-size: 16px;
+  font-style: normal;
+}
+@media screen and (min-width: 768px) {
+  .Hero--contact .Hero-description {
+    font-size: 24px;
+  }
+}
+.Hero--contact .Hero-description a:hover {
+  text-decoration: none;
+}
 .Hero-descriptionSub {
-  margin-top: 20px;
+  margin-top: 40px;
+  font-style: normal;
+  font-weight: bold;
 }
 @media screen and (min-width: 1044px) {
   .Hero-descriptionSub {
     margin-top: 40px;
+  }
+}
+.Hero-divider {
+  margin-left: 12px;
+  margin-right: 12px;
+  display: block;
+  line-height: 12px;
+}
+@media screen and (min-width: 768px) {
+  .Hero-divider {
+    display: inline;
   }
 }
 
@@ -260,6 +338,7 @@ body {
   width: 100%;
   text-align: center;
   margin: 45px auto;
+  width: 90vw;
 }
 @media screen and (min-width: 768px) {
   .Email {
@@ -276,11 +355,12 @@ body {
 @media screen and (min-width: 768px) {
   .Email {
     margin: 90px auto;
+    width: 100%;
   }
 }
 .Email-container {
   background-color: rgba(60, 22, 1, 0.9);
-  padding: 24px 12px;
+  padding: 16px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -293,13 +373,15 @@ body {
   }
 }
 .Email-title {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   color: #be9080;
+  font-family: "Gill Sans", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .Email-title {
     font-size: 32px;
+    font-weight: 600;
   }
 }
 .Email-submitArrow {
@@ -314,13 +396,13 @@ body {
   align-items: center;
   justify-content: center;
   padding: 12px 16px;
-  margin: 20px auto 0;
+  margin: 10px auto 0;
   background-color: #3c1601;
   border: 1px solid #be9080;
   color: #be9080;
   cursor: pointer;
   font-family: "Gill Sans";
-  font-size: 18px;
+  font-size: 16px;
   width: 150px;
 }
 .Email-submitButton:hover .Email-submitArrow {
@@ -331,6 +413,7 @@ body {
     margin: 0;
     border: none;
     width: auto;
+    font-size: 18px;
   }
 }
 .Email-submitText {
@@ -342,19 +425,20 @@ body {
   flex-direction: column;
   border-radius: 2px;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 @media screen and (min-width: 768px) {
   .Email-submitWrapper {
     flex-direction: row;
     border: 1px solid #be9080;
     width: auto;
+    margin-top: 20px;
   }
 }
 .Email-submit {
   padding: 8px 20px;
   color: #3c1601;
-  font-size: 18px;
+  font-size: 16px;
   background-color: #be9080;
   border: 2px solid #3c1601;
 }
@@ -366,24 +450,24 @@ body {
 @media screen and (min-width: 768px) {
   .Email-submit {
     width: 280px;
+    font-size: 18px;
   }
 }
 
 .Lookbook {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 @media screen and (min-width: 768px) {
   .Lookbook {
-    margin-top: 100px;
     width: 80vw;
   }
 }
 
 @media screen and (max-width: 767px) {
   .Header.is-active + .Lookbook {
-    margin-top: 400px;
+    margin-top: 440px;
   }
 }
 
