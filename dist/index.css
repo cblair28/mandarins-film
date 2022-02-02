@@ -227,7 +227,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .Hero--about {
-    margin-top: 150px;
+    margin-top: 100px;
   }
 }
 .Hero-title {
@@ -301,11 +301,6 @@ body {
     font-size: 50px;
   }
 }
-@media screen and (min-width: 1044px) {
-  .Hero--about .Hero-title {
-    font-size: 60px;
-  }
-}
 .Hero--about .Hero-description {
   font-style: normal;
   font-size: 18px;
@@ -318,6 +313,23 @@ body {
   .Hero--about .Hero-description {
     font-size: 22px;
     margin-top: 40px;
+  }
+}
+.Hero--about .Hero-logline {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  .Hero--about .Hero-logline {
+    font-size: 24px;
+  }
+}
+.Hero--about .Hero-story {
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .Hero--about .Hero-story {
+    margin-bottom: 60px;
   }
 }
 .Hero--contact .Hero-description {
@@ -492,6 +504,129 @@ body {
 @media screen and (max-width: 767px) {
   .Header.is-active + .Lookbook {
     margin-top: 440px;
+  }
+}
+
+.Team {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .Team {
+    max-width: 80vw;
+  }
+}
+.Team-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 700;
+  color: #97340b;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .Team-title {
+    font-size: 32px;
+  }
+}
+.Team-list {
+  list-style-type: none;
+  padding: 0 12px;
+}
+.Team-img {
+  max-height: 100%;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.Team-item {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .Team-item {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Team-item--reversed {
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Team-item--reversed .Team-imgWrapper {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Team-item--reversed .Team-castTitle {
+    text-align: left;
+  }
+}
+.Team-item--reversed .Team-desc {
+  text-align: left;
+}
+.Team-imgWrapper {
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  margin-left: 30px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+@media screen and (max-width: 767px) {
+  .Team-imgWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+}
+.Team-castTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #97340b;
+  text-align: right;
+}
+@media screen and (max-width: 767px) {
+  .Team-castTitle {
+    text-align: center;
+  }
+}
+.Team-role, .Team-separator {
+  color: black;
+  font-style: italic;
+}
+@media screen and (max-width: 767px) {
+  .Team-separator {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Team-role {
+    display: block;
+  }
+}
+.Team-contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Team-desc {
+  font-family: "Gill Sans";
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+}
+@media screen and (max-width: 767px) {
+  .Team-desc {
+    text-align: left;
   }
 }
 
