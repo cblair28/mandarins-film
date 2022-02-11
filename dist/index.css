@@ -130,12 +130,21 @@ body {
   }
 }
 @media screen and (min-width: 768px) {
-  .Header-menuItem--instagram {
+  .Header-menuItem--spacer {
     margin-left: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Header-menuItem--instagram {
+    margin-right: 16px;
   }
 }
 .Header-menuItem--instagram:hover {
   background-color: #be9080;
+}
+.Header-menuItem--facebook .Header-menuInstagram {
+  height: 35px;
+  width: 35px;
 }
 .Header-menuLink {
   color: #3c1601;

@@ -182,16 +182,33 @@ body
       border: none;
     }
 
-    &--instagram
+    &--spacer
     {
       @media screen and (min-width: $bp-md-min)
       {
         margin-left: auto;
       }
+    }
+
+    &--instagram
+    {
+      @media screen and (min-width: $bp-md-min)
+      {
+        margin-right: 16px;
+      }
 
       &:hover
       {
         background-color: $beige;
+      }
+    }
+
+    &--facebook
+    {
+      .Header-menuInstagram
+      {
+        height: 35px;
+        width: 35px;
       }
     }
   }
