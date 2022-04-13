@@ -63,13 +63,14 @@ body {
 }
 
 .background-church {
-  background-image: url("../assets/images/mobilebg.jpg");
+  background-color: black;
+  background-image: url("../assets/images/mandarins_bg_sm.jpeg");
   background-size: cover;
 }
 @media screen and (min-width: 1044px) {
   .background-church {
     background-repeat: no-repeat;
-    background-image: url("../assets/images/background.jpg");
+    background-image: url("../assets/images/mandarings_bg_large.jpeg");
     background-position-x: 50%;
   }
 }
@@ -93,7 +94,7 @@ body {
 }
 .Header-wrapper {
   position: relative;
-  background-color: #f2ded5;
+  background-color: black;
 }
 @media screen and (max-width: 767px) {
   .Header-wrapper {
@@ -114,12 +115,12 @@ body {
     position: absolute;
     left: -100%;
     width: 100%;
-    background-color: #f2ded5;
+    background-color: black;
   }
 }
 .Header-menuItem {
   display: flex;
-  border-bottom: 1px solid #3c1601;
+  border-bottom: 1px solid #557878;
 }
 @media screen and (min-width: 768px) {
   .Header-menuItem {
@@ -147,7 +148,7 @@ body {
   width: 35px;
 }
 .Header-menuLink {
-  color: #3c1601;
+  color: #557878;
   padding: 20px;
   font-weight: bold;
   display: block;
@@ -187,7 +188,7 @@ body {
   transition: 0.3s ease all;
 }
 .Header-toggle::before, .Header-toggle::after, .Header-toggleBar {
-  background-color: #3c1601;
+  background-color: #557878;
   content: "";
   display: block;
   height: 6px;
@@ -230,31 +231,20 @@ body {
   }
 }
 @media screen and (min-width: 768px) {
-  .Hero {
-    margin-top: 240px;
-  }
-}
-@media screen and (min-width: 768px) {
   .Hero--about {
     margin-top: 100px;
   }
 }
 .Hero-title {
-  font-size: 50px;
-  font-weight: 700;
-  color: #97340b;
   text-align: center;
   margin: 0 0 20px 0;
-  text-transform: uppercase;
+}
+.Hero-titleImg {
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .Hero-title {
-    font-size: 70px;
-  }
-}
-@media screen and (min-width: 1044px) {
-  .Hero-title {
-    font-size: 150px;
+  .Hero-titleImg {
+    width: 90%;
   }
 }
 .Hero-comingSoon .Hero-title {
@@ -383,6 +373,7 @@ body {
   text-align: center;
   margin: 45px auto;
   width: 90vw;
+  margin-top: 200px;
 }
 @media screen and (min-width: 768px) {
   .Email {
@@ -403,8 +394,8 @@ body {
   }
 }
 .Email-container {
-  background-color: rgba(60, 22, 1, 0.9);
-  padding: 16px 12px;
+  background-color: rgba(28, 10, 2, 0.9);
+  padding: 12px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -412,19 +403,19 @@ body {
 }
 @media screen and (min-width: 768px) {
   .Email-container {
-    padding: 32px 80px 44px;
+    padding: 16px 80px 32px;
     display: inline-flex;
   }
 }
 .Email-title {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   color: #be9080;
   font-family: "Gill Sans", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .Email-title {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 600;
   }
 }
@@ -484,7 +475,7 @@ body {
   padding: 8px 20px;
   color: #3c1601;
   font-size: 16px;
-  background-color: #be9080;
+  background-color: rgba(190, 144, 128, 0.6);
   border: 2px solid #3c1601;
 }
 .Email-submit::placeholder {
