@@ -117,6 +117,7 @@ body
     background-repeat: no-repeat;
     background-image: url('../assets/images/mandarings_bg_large.jpeg');
     background-position-x: 50%;
+    background-position-y: calc(50% + 100px);
   }
 }
 
@@ -615,6 +616,86 @@ body
       font-size: 18px;
     }
   }
+}
+
+.Seed
+{
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-family:'Gill Sans', sans-serif;
+
+  @media screen and (max-width: $bp-sm-max)
+  {
+    font-size: 16px;
+    margin-top: 40px;
+    background-color: rgba(28, 10, 2, 0.9);
+    padding: 12px 12px;
+  }
+
+  &-copy
+  {
+    color: #B15517;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: $bp-sm-max)
+    {
+      margin-bottom: 16px;
+    }
+  }
+
+  &-submitArrow
+  {
+    width: 20px;
+    margin-left: 12px;
+    position: relative;
+    left: 0;
+    transition: left 0.3s ease;
+  }
+
+  &-cta
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    margin: 10px auto 0;
+    background-color: $dark-brown;
+    border: 1px solid $beige;
+    color: $beige;
+    cursor: pointer;
+    font-family: 'Gill Sans';
+    font-size: 16px;
+    width: 150px;
+
+    &:hover
+    {
+      .Seed-submitArrow
+      {
+        left: 6px;
+      }
+    }
+
+    @media screen and (min-width: $bp-md-min)
+    {
+      margin: 0;
+      border: none;
+      width: auto;
+      font-size: 18px;
+      padding: 12px 16px;
+    }
+  }
+  
+  &-ctaText
+  {
+    position: relative;
+    top: 2px;
+  }
+
 }
 
 .Lookbook
